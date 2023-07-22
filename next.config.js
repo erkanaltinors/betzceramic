@@ -5,9 +5,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'erkanaltinors.github.io',
+        hostname: 'raw.githubusercontent.com',
         port: '',
-        pathname: '/betzceramic',
+        pathname: '/erkanaltinors/betzceramic/main/public', 
       },
     ],
   }

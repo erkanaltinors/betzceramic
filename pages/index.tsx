@@ -9,7 +9,7 @@ export default function Home() {
             <div className="absolute left-[-25%] top-0 w-1/2 h-full flex flex-col justify-center">
             <p className='text-xl'>LOREM IPSUM DOLOR SIT</p>
             <p className="text-3xl font-light">Lorem ipsum dolor sit amet.</p>
-            <Link href={'/shop'} className="px-6 py-2 bg-lime-950 text-white self-end rounded-sm">Shop</Link>
+            <Link href={'https://www.shopier.com/ShowProductNew/storefront.php?shop=betzceramic&sid=VVdyZEVma1BkTE1UOGoyQjBfLTFfIF8g'} target="_blank" className="px-6 py-2 bg-lime-950 text-white self-end rounded-sm">Shop</Link>
             </div>
           </div>
         </div>

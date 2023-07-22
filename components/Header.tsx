@@ -9,6 +9,7 @@ export default function Header(){
                 <div className="container">
                     <Link href={'/'}><Image alt="Betz Ceramic Logo" src={'https://raw.githubusercontent.com/erkanaltinors/betzceramic/main/public/images/logo.png'} layout="intrinsic" width={100} height={50} className="mx-auto" /></Link>
                 </div>
+                <span></span>
             </header>
         </Fragment>
     );

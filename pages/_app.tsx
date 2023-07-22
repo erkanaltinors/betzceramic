@@ -2,6 +2,8 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { NextFontWithVariable } from 'next/dist/compiled/@next/font'
 import { Unbounded } from 'next/font/google'
+import { Fragment } from 'react'
+import Header from '@/components/Header'
 
 const unbounded : NextFontWithVariable = Unbounded({
   subsets: ['latin'],
@@ -11,5 +13,8 @@ const unbounded : NextFontWithVariable = Unbounded({
 })
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <main className={`${unbounded.variable} font-sans`}><Component {...pageProps} /></main>
+  return <Fragment>
+    <Header />
+    <main className={`${unbounded.variable} font-sans`}><Component {...pageProps} /></main>
+  </Fragment>
 }

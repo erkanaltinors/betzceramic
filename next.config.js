@@ -1,7 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '/betzceramic'
+  images:{
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'erkanaltinors.github.io',
+        port: '',
+        pathname: '/betzceramic',
+      },
+    ],
+  }
 }
 
 module.exports = nextConfig

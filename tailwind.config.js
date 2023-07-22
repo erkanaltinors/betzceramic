@@ -6,6 +6,13 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container:{
+      center: true,
+      padding: {
+        DEFAULT: '20px',
+        md: '40px'
+      },
+    },
     extend: {
       fontFamily: {
         sans: ['var(--font-unbounded), system-ui']

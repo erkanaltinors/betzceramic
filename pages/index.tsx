@@ -14,6 +14,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="py-5 md:py-10"></section>
     </main>
   )
 }

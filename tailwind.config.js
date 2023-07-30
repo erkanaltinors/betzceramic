@@ -17,6 +17,11 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-unbounded), system-ui']
       },
+      colors:{
+        amber:{
+          800: "#c07460"
+        }
+      }
     },
   },
   plugins: [],

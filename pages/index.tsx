@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 export default function Home() {
@@ -14,7 +15,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-5 md:py-10"></section>
+      <section className="py-5 md:py-10 relative overflow-hidden">
+        <div className="flex justify-between text-8xl drop-shadow-xl text-white font-bold">
+          <span>S</span>
+          <span>T</span>
+          <span>O</span>
+          <span>N</span>
+          <span>E</span>
+          <span>W</span>
+          <span>A</span>
+          <span>R</span>
+          <span>E</span>
+        </div>
+      </section>
     </main>
   )
 }

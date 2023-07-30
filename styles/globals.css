@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
+p:not(:last-child){
+    @apply mb-2;
+}

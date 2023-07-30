@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import Image from "next/image";
 import '@splidejs/react-splide/css';
 

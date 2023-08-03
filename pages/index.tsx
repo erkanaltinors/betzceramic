@@ -3,6 +3,7 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import Image from "next/image";
 import '@splidejs/react-splide/css';
 import { GetStaticProps } from "next";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 type ContentProps = {
   title: string,
@@ -28,11 +29,11 @@ export default function Home({content} : {content: ContentProps}) {
           </div>
         </div>
       </section>
-      <section className="py-5 md:py-10 relative overflow-hidden bg-amber-800 lg:bg-transparent">
+      <section className="py-5 md:py-10 relative overflow-hidden">
         <div className="flex justify-between text-xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl drop-shadow-xl text-white font-bold">
           {
-            content.firstLineHeading.split('').map((word) => (
-              <span className="inline-flex" key={word}>{word}</span>
+            content.firstLineHeading.split('').map((word, index) => (
+              <span className="inline-flex" key={index}>{word}</span>
             ))
           }
         </div>
@@ -79,13 +80,51 @@ export default function Home({content} : {content: ContentProps}) {
           </div>
         </div>
       </section>
-      <section className="py-5 md:py-10 relative overflow-hidden bg-amber-800 lg:bg-transparent">
+      <section className="relative overflow-hidden">
         <div className="flex justify-between text-xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl drop-shadow-xl text-white font-bold">
           {
             content.secondLineHeading.split('').map((word) => (
               <span className="inline-flex" key={word}>{word}</span>
             ))
           }
+        </div>
+      </section>
+      <section className="py-5 md:py-10">
+        <div className="container">
+          <div className="flex flex-wrap items-center -ml-4">
+            <div className="w-full md:w-1/2 pl-4">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Are products handmade?</AccordionTrigger>
+        <AccordionContent>
+          Yes. They all born in hands.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Is it customizable?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It shapes with your own ideas or wishes. Just tell us what you want to see.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Does it need any care?</AccordionTrigger>
+        <AccordionContent>
+          Depends on usage and product. You will see some info with your product to take care of it.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+            </div>
+            <div className="w-full md:w-1/2 pl-4">
+              <div className="relative w-full aspect-square md:aspect-[4/3]">
+                <Image
+                  alt={content.sliderItems[0].name}
+                  src={content.sliderItems[0].imageUrl}
+                  className="object-cover"
+                  fill
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

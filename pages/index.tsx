@@ -29,7 +29,7 @@ export default function Home({content} : {content: ContentProps}) {
           </div>
         </div>
       </section>
-      <section className="py-5 md:py-10 relative overflow-hidden">
+      <section className="py-5 md:py-10 relative">
         <div className="flex justify-between text-xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl drop-shadow-xl text-white font-bold">
           {
             content.firstLineHeading.split('').map((word, index) => (
@@ -80,7 +80,7 @@ export default function Home({content} : {content: ContentProps}) {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden">
+      <section className="relative">
         <div className="flex justify-between text-xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl drop-shadow-xl text-white font-bold">
           {
             content.secondLineHeading.split('').map((word) => (

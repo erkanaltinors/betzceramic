@@ -1,17 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
+import { Picture } from 'astro:assets';
 import stoneware from "../assets/images/stoneware.jpg";
 ---
 
 <Layout title="Betz Ceramic">
 	<main>
-    <section>
-      <div class="container">
-        <Image src={stoneware} alt="stoneware"/>
-      </div>
+    <section class="h-screen w-screen flex items-center justify-center">
+      <h1>Betz Ceramic</h1>
     </section>
-		<section class="pb-10 bg-gray-50">
+		<!-- <section class="pb-10 bg-gray-50">
         <div class="flex justify-between text-4xl md:text-6xl lg:text-8xl drop-shadow-xl text-white md:text-gray-50 font-bold">
           <span>S</span>
           <span>T</span>
@@ -23,6 +21,6 @@ import stoneware from "../assets/images/stoneware.jpg";
           <span>R</span>
           <span>E</span>
         </div>
-		</section>
+		</section> -->
 	</main>
 </Layout>

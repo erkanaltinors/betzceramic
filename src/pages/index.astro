@@ -1,13 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import stoneware from "../assets/images/stoneware.jpg";
 ---
 
 <Layout title="Betz Ceramic">
 	<main>
-		<section class="min-h-screen bg-green-50 text-black flex items-center justify-center">
-			<div class="container h-full relative">
-				<h1 class="text-center text-8xl font-medium">Betz Ceramic</h1>
-			</div>
+    <section>
+      <div class="container">
+        <Image src={stoneware} alt="stoneware"/>
+      </div>
+    </section>
+		<section class="pb-10 bg-gray-50">
+        <div class="flex justify-between text-4xl md:text-6xl lg:text-8xl drop-shadow-xl text-white md:text-gray-50 font-bold">
+          <span>S</span>
+          <span>T</span>
+          <span>O</span>
+          <span>N</span>
+          <span>E</span>
+          <span>W</span>
+          <span>A</span>
+          <span>R</span>
+          <span>E</span>
+        </div>
 		</section>
 	</main>
 </Layout>

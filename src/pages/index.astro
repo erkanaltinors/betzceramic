@@ -1,26 +1,121 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Picture } from 'astro:assets';
-import stoneware from "../assets/images/stoneware.jpg";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import stoneware from "../images/stoneware.jpg";
+import mug from "../images/mug.jpg";
+import bowls from "../images/bowls.jpg";
+import plates from "../images/plates.jpg";
+import bowlSvg from "../images/bowl.svg";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout title="Betz Ceramic">
-	<main>
-    <section class="h-screen w-screen flex items-center justify-center">
-      <h1>Betz Ceramic</h1>
-    </section>
-		<!-- <section class="pb-10 bg-gray-50">
-        <div class="flex justify-between text-4xl md:text-6xl lg:text-8xl drop-shadow-xl text-white md:text-gray-50 font-bold">
-          <span>S</span>
-          <span>T</span>
-          <span>O</span>
-          <span>N</span>
-          <span>E</span>
-          <span>W</span>
-          <span>A</span>
-          <span>R</span>
-          <span>E</span>
+  <main>
+    <section class="py-10 md:py-20 bg-gray-50">
+      <div class="container">
+        <div class="p-4 bg-white shadow-md">
+          <div
+            class="relative flex items-center justify-center overflow-hidden"
+          >
+            <Image
+              src={stoneware}
+              width={1024}
+              height={380}
+              alt="Stoneware fincan sunumu"
+              class="w-full h-[calc(100vh-160px)] object-cover"
+              loading="eager"
+            />
+            <span class="absolute w-full h-full bg-black bg-opacity-10"></span>
+            <h1 class="absolute text-white text-8xl font-light">
+              Betz Ceramic
+            </h1>
+          </div>
         </div>
-		</section> -->
-	</main>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden">
+      <Icon
+        name="bowl"
+        class="text-gray-300 opacity-20 absolute bottom-0 lg:left-[-10%] 2xl:left-[-5%] -rotate-6 hidden xl:block"
+        width={400}
+        height={290}
+      />
+      <div
+        class="px-4 md:px-8 flex justify-between text-4xl md:text-6xl lg:text-9xl drop-shadow-xl text-white md:text-gray-50 font-bold md:mb-10"
+      >
+        <span>S</span>
+        <span>T</span>
+        <span>O</span>
+        <span>N</span>
+        <span>E</span>
+        <span>W</span>
+        <span>A</span>
+        <span>R</span>
+        <span>E</span>
+      </div>
+      <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+          <div class="col-span-1 md:w-3/4 ml-auto">
+            <p class="text-xl">
+              Yüksek sıcaklıklara dayanan yapısıyla öne çıkan stoneware
+              ürünlerimiz ile yepyeni lezzetleri keşfedin.
+            </p>
+            <p class="text-xl">
+              Her biri benzersiz stoneware ürünlerimiz, elinizde kendi
+              hikayesini yeniden yazacak.
+            </p>
+          </div>
+          <div class="col-span-1">
+            <div class="grid grid-cols-2 gap-4 items-center">
+              <div class="col-span-1 relative h-full">
+                <Image
+                  src={mug}
+                  alt="stoneware mug"
+                  class="object-cover h-full w-full rounded-sm"
+                />
+              </div>
+              <div class="col-span-1">
+                <div class="flex flex-col gap-4">
+                  <Image src={bowls} alt="stoneware bowls" class="rounded-sm" />
+                  <Image
+                    src={plates}
+                    alt="stoneware plates"
+                    class="rounded-sm"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-10">
+      <div
+        class="px-4 md:px-8 flex justify-between text-4xl md:text-6xl lg:text-9xl drop-shadow-xl text-white md:text-gray-50 font-bold md:mb-10"
+      >
+        <span>E</span>
+        <span>L</span>
+        <span>Y</span>
+        <span>A</span>
+        <span>P</span>
+        <span>I</span>
+        <span>M</span>
+        <span>I</span>
+      </div>
+    </section>
+    <section class="">
+      <div
+        class="px-4 md:px-8 flex justify-between text-4xl md:text-6xl lg:text-9xl drop-shadow-xl text-white md:text-gray-50 font-bold md:mb-10"
+      >
+        <span>Ü</span>
+        <span>R</span>
+        <span>Ü</span>
+        <span>N</span>
+        <span>L</span>
+        <span>E</span>
+        <span>R</span>
+      </div>
+    </section>
+  </main>
 </Layout>
